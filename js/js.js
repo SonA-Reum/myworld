@@ -201,7 +201,9 @@ function lightbox(event){
      newImg = event.target.getAttribute('data-lightbox');
      lightImg.src = newImg;
      lightBox.classList.add('visible');
+     
  }
+ document.documentElement.style.overflowY = "hidden";
 }
 
 // 라이트 박스가 작동중일 때, 어느 곳을 누르든 라이트 박스가 꺼진다.
@@ -209,6 +211,7 @@ lightBox.addEventListener('click',function(){
     if (event.target.id === 'lightBox' || event.target.id === 'lightImg') {
      lightBox.classList.remove('visible');
     }
+    document.documentElement.style.overflowY = "auto";
 })
 
 //close 버튼 누르면 꺼지기.
