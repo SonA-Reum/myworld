@@ -568,7 +568,7 @@ var sceneTree04 = new ScrollMagic.Scene({
     })
     .setTween(tweenSect02Tree)
     .addTo(controllersection01)
-    .addIndicators({name:"나무!"})
+    // .addIndicators({name:"나무!"})
    
     // 배경색 바꾸기
     var section01 = document.querySelector('.section01');
@@ -655,10 +655,12 @@ var sceneTree04 = new ScrollMagic.Scene({
         }
     };
 
+  let once = 0;
   window.addEventListener("scroll", (event) => {
     let scrollY = this.scrollY;
+    
   //바디의 스크롤 위치 값이 #trigger03의 절대 위치 값 보다 클 때, 숫자가 카운트 된다.
-    if ( scrollY > absoluteTop) {
+    if ( scrollY > absoluteTop && once === 0) {
       
       new numberCounter("count01", 80);
       new numberCounter("count02", 80);
@@ -666,7 +668,8 @@ var sceneTree04 = new ScrollMagic.Scene({
       new numberCounter("count04", 90);
       new numberCounter("count05", 60);
       new numberCounter("count06", 70);
-      
+      once = 1;
+     
     }
 });
 
