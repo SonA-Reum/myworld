@@ -547,10 +547,11 @@ var sceneTree04 = new ScrollMagic.Scene({
     //나무 배경 opacity
 
     var sect02Tree = document.querySelector('.section02 .item .bg-tree');
-    TweenMax.set(sect02Tree, { opacity: 0});
+    TweenMax.set(sect02Tree, { opacity: 0, y: 300});
     var tweenSect02Tree = new TimelineMax()
     .to(sect02Tree, 20, {
       opacity:1,
+      y: 0,
       ease: Cubic.easeOut
     })
     .to(sect02Tree, 10, {
@@ -567,7 +568,7 @@ var sceneTree04 = new ScrollMagic.Scene({
     })
     .setTween(tweenSect02Tree)
     .addTo(controllersection01)
-    // .addIndicators({name:"나무!"})
+    .addIndicators({name:"나무!"})
    
     // 배경색 바꾸기
     var section01 = document.querySelector('.section01');
