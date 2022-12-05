@@ -1281,6 +1281,9 @@ footer
   .circle_box .circle img.big-tree {
     width: 50%;
     height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
   }
   .circle_box .circle img {
     width: 30%;

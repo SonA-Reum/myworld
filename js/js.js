@@ -547,7 +547,7 @@ var sceneTree04 = new ScrollMagic.Scene({
     //나무 배경 opacity
 
     var sect02Tree = document.querySelector('.section02 .item .bg-tree');
-    TweenMax.set(sect02Tree, { opacity: 0, y: 300});
+    TweenMax.set(sect02Tree, { opacity: 0, y: 100});
     var tweenSect02Tree = new TimelineMax()
     .to(sect02Tree, 60, {
       delay: 10,
